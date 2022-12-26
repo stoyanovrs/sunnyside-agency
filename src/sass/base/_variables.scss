@@ -1,0 +1,58 @@
+$transition: all ease 0.3s;
+
+/// Breakpoints map
+
+$breakpoints: (
+  "small": 320px,
+  "medium": 800px,
+  "large": 1024px,
+) !default;
+
+/// Mixin to manage responsive breakpoints
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+//Primary
+
+$soft-red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$dark-desaturated-cyan: hsl(167, 40%, 24%); //graphic design text
+$dark-blue: hsl(198, 62%, 26%); //photography text
+$dark-moderate-cyan: hsl(168, 34%, 41%); // footer
+
+// Neutral
+
+$very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$very-dark-grayish-blue: hsl(213, 9%, 39%);
+$dark-grayish-blue: hsl(232, 10%, 55%);
+$grayish-blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
+:root {
+  --header-color-text: #{$white};
+  --button-text: #{$very-dark-desaturated-blue};
+  --heading-color: #{$very-dark-desaturated-blue};
+  --paragraph-color: #{$dark-grayish-blue};
+  --yellow: #{$yellow};
+  --red: #{$soft-red};
+  --transition: #{$transition};
+  --gd-text: #{$dark-desaturated-cyan};
+  --ph-text: #{$dark-blue};
+  --secondary-paragraph: #{$grayish-blue};
+  --footer-bg: #{$dark-moderate-cyan};
+  --white: #{$white};
+}

@@ -1,0 +1,15 @@
+@use "variables" as *;
+
+body {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 160%;
+  /* or 161% */
+  color: var(--paragraph-color);
+  letter-spacing: -0.02em;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}

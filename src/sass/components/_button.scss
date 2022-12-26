@@ -1,0 +1,24 @@
+@use "../base" as *;
+
+.header-cta {
+  padding: 13px 35px;
+  border: none;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 1);
+  color: var(--button-text);
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: var(--transition);
+  &:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: var(--white);
+  }
+}
+@include respond-to("medium") {
+  .header-cta {
+    background: var(--yellow);
+  }
+}

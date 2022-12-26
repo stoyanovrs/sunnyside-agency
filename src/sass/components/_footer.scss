@@ -1,0 +1,45 @@
+footer {
+  background: var(--footer-bg);
+  min-height: 343px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 48px;
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 56px;
+      a {
+        color: var(--gd-text);
+        transition: var(--transition);
+        &:hover {
+          color: var(--white);
+        }
+      }
+    }
+  }
+  .footer-logo {
+    svg {
+      display: inline-block;
+      scale: 1.4;
+      path {
+        fill: var(--gd-text);
+      }
+    }
+  }
+}
+.contact {
+  display: flex;
+  gap: 26px;
+  a svg path {
+    transition: var(--transition);
+    &:hover {
+      fill: var(--white);
+    }
+  }
+}

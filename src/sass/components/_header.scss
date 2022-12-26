@@ -1,0 +1,103 @@
+@use "../base" as *;
+
+header {
+  background: url("../../assets/images/desktop/image-header.jpg") no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  min-height: 800px;
+  color: var(--header-color-text);
+  .container {
+    display: flex;
+    align-items: center;
+    padding: 2.5rem 48px;
+
+    justify-content: space-between;
+    position: relative;
+    @include respond-to("medium") {
+      padding: 2.5rem 24px;
+    }
+  }
+}
+.app-main-nav {
+  position: relative;
+}
+.menu-container {
+  position: relative;
+}
+.opened {
+  position: absolute;
+  top: -20px;
+  right: -19px;
+  width: 44px;
+  height: 44px;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+  @include respond-to("medium") {
+    height: 0;
+    width: 0;
+    position: absolute;
+    overflow: hidden;
+  }
+  li:not(:last-child) {
+    margin-right: 48px;
+    a {
+      transition: var(--transition);
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    @include respond-to("medium") {
+      margin: 0;
+      a {
+        color: var(--paragraph-color);
+      }
+    }
+  }
+}
+.droped {
+  position: absolute;
+  width: 90vw;
+  height: 300px;
+  margin: 0 auto;
+  right: 0vw;
+  /* left: 3vw; */
+  top: 6rem;
+  background: var(--white);
+  visibility: inherit;
+  flex-direction: column;
+  display: flex;
+  gap: 24px;
+  padding: 3rem 0;
+  overflow: visible;
+  &::before {
+    content: "";
+    position: absolute;
+    border-right: solid 0px transparent;
+    border-left: solid 25px transparent;
+    border-bottom: solid 25px var(--white);
+    top: -25px;
+    right: 0;
+  }
+}
+.hamburger {
+  display: none;
+  @include respond-to("medium") {
+    display: block;
+  }
+}
+
+.headline {
+  padding: 64px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 105px;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color: var(--white);
+  }
+}

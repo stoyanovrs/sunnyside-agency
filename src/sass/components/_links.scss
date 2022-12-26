@@ -1,0 +1,40 @@
+@use "../base/" as *;
+.more {
+  color: var(--button-text);
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 134px;
+    left: -8px;
+    bottom: -2px;
+    border-radius: 6px;
+    background: var(--yellow);
+    z-index: -1;
+    opacity: 0.2;
+    transition: var(--transition);
+  }
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+  &--red {
+    @extend .more;
+    &::after {
+      background: var(--red);
+    }
+  }
+  @include respond-to("medium") {
+    margin: 0 auto;
+  }
+}

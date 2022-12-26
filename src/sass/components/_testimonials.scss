@@ -1,0 +1,41 @@
+@use "../base/" as *;
+.testimonials {
+  min-height: 763px;
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 120px 15px;
+    text-align: center;
+    h3 {
+      font-size: 19px;
+      line-height: 23px;
+      letter-spacing: 0.29em;
+      text-transform: uppercase;
+      color: var(--paragraph-color);
+    }
+  }
+}
+.clients {
+  display: flex;
+  padding: 76px 0;
+  gap: 30px;
+  @include respond-to("medium") {
+    flex-direction: column;
+  }
+}
+.client {
+  display: flex;
+  flex-direction: column;
+  row-gap: 64px;
+}
+.client-image img {
+  max-width: 70px;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.bio {
+  p {
+    color: var(--secondary-paragraph);
+  }
+}

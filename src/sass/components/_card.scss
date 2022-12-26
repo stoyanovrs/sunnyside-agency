@@ -1,0 +1,79 @@
+@use "../base" as *;
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  min-height: 600px;
+  @include respond-to("medium") {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+  }
+  .image {
+    display: block;
+    @include respond-to("medium") {
+      grid-row: 1 / 2;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .card-text {
+    display: flex;
+    .content {
+      max-width: 445px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.62rem;
+      @include respond-to("medium") {
+        text-align: center;
+        padding: 62px 0;
+      }
+    }
+  }
+}
+.red {
+  flex-direction: row;
+}
+.cimages {
+  align-items: flex-end;
+  text-align: center;
+  .card-text {
+    min-height: 600px;
+    display: flex;
+    align-self: flex-end;
+    .content {
+      margin: 3.7rem auto;
+      justify-content: flex-end;
+      max-width: 380px;
+      row-gap: 2rem;
+    }
+  }
+  .ph {
+    background: url("../../assets/images/desktop/image-photography.jpg")
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+    .content {
+      h3,
+      p {
+        color: var(--ph-text) !important;
+      }
+    }
+  }
+  .gd {
+    background: url("../../assets/images/desktop/image-graphic-design.jpg")
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+    .content {
+      h3,
+      p {
+        color: var(--gd-text) !important;
+      }
+    }
+  }
+}
