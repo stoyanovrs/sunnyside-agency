@@ -67,6 +67,17 @@ const Footer = () => {
             </svg>
           </a>
         </div>
+        <div class="attribution">
+          Challenge by{" "}
+          <a
+            href="https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef"
+            target="_blank"
+          >
+            Frontend Mentor
+          </a>
+          . Coded by <a href="https://github.com/stoyanovrs/">Rumen Stoyanov</a>
+          .
+        </div>
       </div>
     </footer>
   );

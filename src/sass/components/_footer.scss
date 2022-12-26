@@ -43,3 +43,12 @@ footer {
     }
   }
 }
+.attribution {
+  color: var(--gd-text);
+  a {
+    transition: var(--transition);
+    &:hover {
+      color: var(--white);
+    }
+  }
+}
