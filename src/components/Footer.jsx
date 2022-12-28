@@ -67,11 +67,12 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <div class="attribution">
+        <div className="attribution">
           Challenge by{" "}
           <a
             href="https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef"
             target="_blank"
+            rel="noreferrer"
           >
             Frontend Mentor
           </a>
